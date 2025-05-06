@@ -1,16 +1,49 @@
+/*CLASS SELECTOR IN Images.css*/
+/* Type Selector */
 body {
     background-color: #f9f9f9;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Courier New', monospace;
     font-size: 1rem;
     color: #1a1a1a;
-    line-height: 1.6em;
-    margin: 0em;
-    padding: 0em;
+    line-height: 1.5em
 }
 
-h1 {
+
+p {
+    color: #1a1a1a;
+    font-size: 1 rem;
+}
+
+
+/* Combination Selector */
+
+h1,
+h2 {
+    color: #004466;
     text-align: center;
-    font-size: 2.5rem;
     font-weight: bold;
-    margin-top: 1rem;
+    letter-spacing: 0.05rem;
+}
+
+/* Relational Selector */
+footer p {
+    background-color: #d0d0d0;
+    color: #444444;
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.875rem;
+}
+
+/* Pseudo-Class */
+a {
+    color: #0055aa;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #003366;
+}
+
+a:visited {
+    color: #551a8b;
 }
