@@ -5,13 +5,30 @@ body {
     font-family: 'Courier New', monospace;
     font-size: 1rem;
     color: #1a1a1a;
-    line-height: 1.5em
+    line-height: 1.5em;
 }
+
 
 
 p {
     color: #1a1a1a;
-    font-size: 1 rem;
+    font-size: 1rem;
+    padding-left: 1.5rem;
+}
+
+main {
+    background-image: url("/../Images/logo_background.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+q {
+  display: block;      /* or inline-block */
+  width: 80%;          /* must set a width for margin auto to work */
+  margin: 1em auto;    
+  font-style: italic;
+  text-align: center;
 }
 
 
