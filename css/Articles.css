@@ -7,3 +7,15 @@ article {
 article h1 {
     column-span: all;
 }
+
+@media only screen and (max-width: 1000px) {
+    article {
+        columns: 3;
+    }
+}
+
+@media only screen and (max-width: 855px) {
+    article {
+        columns: 2;
+    }
+}

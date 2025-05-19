@@ -11,3 +11,13 @@
     border-radius: 4px;
     margin: 5px;
 }
+
+/* Small Screen tweaks */
+@media only screen and (max-width: 480px) {
+    .product img {
+        float: none;
+        display: block;
+        width: 80%;
+        margin: 0 auto 1rem;
+    }
+}

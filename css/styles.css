@@ -8,7 +8,13 @@ body {
     line-height: 1.5em;
 }
 
-
+main {
+    background-image: url("../Images/logo_background.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-attachment: fixed;
+}
 
 p {
     color: #1a1a1a;
@@ -16,19 +22,14 @@ p {
     padding-left: 1.5rem;
 }
 
-main {
-    background-image: url("../Images/logo_background.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-}
-
 q {
-  display: block;      /* or inline-block */
-  width: 80%;          /* must set a width for margin auto to work */
-  margin: 1em auto;    
-  font-style: italic;
-  text-align: center;
+    display: block;
+    /* or inline-block */
+    width: 80%;
+    /* must set a width for margin auto to work */
+    margin: 1em auto;
+    font-style: italic;
+    text-align: center;
 }
 
 

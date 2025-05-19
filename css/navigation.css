@@ -1,9 +1,92 @@
 nav ul {
     list-style: none;
-   
+
 }
+
 nav ul li {
     display: inline;
-     padding-right: 3em;
-     text-align: left;
+    padding-right: 3em;
+    text-align: left;
+}
+
+/* PRODUCTS LISTING */
+.product {
+    overflow: auto;
+    /* clears the float */
+    padding: 1rem 0;
+    border-bottom: 2px solid #ccc;
+}
+
+.product img {
+    float: left;
+    width: 30%;
+    max-width: 200px;
+    margin-right: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.product .product-info h2 {
+    margin-top: 0;
+}
+
+.product .product-info p {
+    line-height: 1.4;
+}
+
+
+/* Keep list horizontal */
+.product-toc ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.product-toc li {
+    display: inline-block;
+    margin: 0;
+    /* spacing handled by the separator */
+}
+
+/* Separator bar between items */
+.product-toc li+li::before {
+    content: "|";
+    display: inline-block;
+    margin: 0 0.75rem;
+    /* space around the bar */
+    color: #999;
+    /* tweak to match your design */
+}
+
+/* Link styling */
+.product-toc a {
+    text-decoration: none;
+    padding: 0.25rem 0;
+    /* gives a little click area */
+    border-bottom: 1px dotted var(--color-accent);
+}
+
+.product-toc a:hover {
+    color: var(--color-accent);
+}
+
+
+/* Fixing the Navigation Bar */
+
+@media only screen and (max-width: 855px) {
+
+    /* Make each nav item stack */
+    nav ul li {
+        display: block;
+        /* change from inline to block */
+        padding-right: 0;
+        /* remove the large right padding */
+        margin-bottom: 0.75rem;
+        /* space between items */
+    }
+
+    /* Center the links in their container */
+    nav ul {
+        text-align: center;
+        /* centers the block-level li contents */
+    }
 }
