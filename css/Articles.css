@@ -1,5 +1,5 @@
 article {
-    columns: 4;
+    columns: 3;
     column-rule: 2px solid #000000;
     padding: 4px;
 }
@@ -8,14 +8,34 @@ article h1 {
     column-span: all;
 }
 
+article p:first-of-type {
+    font-style: italic;
+    margin-bottom: 1rem;
+}
+
+blockquote {
+    font-style: italic;
+    margin: 1rem 2rem;
+    padding-left: 1rem;
+    border-left: 4px solid #666;
+    color: #333;
+}
+
+
+.field-article {
+    border-bottom: 2px solid #ccc;
+    padding: 2rem 1rem;
+}
+
+
 @media only screen and (max-width: 1000px) {
     article {
-        columns: 3;
+        columns: 2;
     }
 }
 
 @media only screen and (max-width: 855px) {
     article {
-        columns: 2;
+        columns: 1;
     }
 }

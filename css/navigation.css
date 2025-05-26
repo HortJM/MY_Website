@@ -1,72 +1,95 @@
 nav ul {
-    list-style: none;
-
+  display: flex;
+  flex-wrap: wrap;
+  /* wrap on small screens if needed */
+  gap: 1.5rem;
+  /* space between items */
+  padding-left: 2rem;
+  list-style: none;
 }
 
 nav ul li {
-    display: inline;
-    padding-right: 3em;
-    text-align: left;
+  margin: 0;
+  /* inline spacing now via gap */
 }
 
 /* PRODUCTS LISTING */
 .product {
-    overflow: auto;
-    /* clears the float */
-    padding: 1rem 0;
-    border-bottom: 2px solid #ccc;
+  display: flex;
+  align-items: flex-start;
+  /* or center */
+  gap: 1rem;
+  /* spacing between image/info */
+  padding: 1rem 0;
+  border-bottom: 2px solid #ccc;
 }
 
 .product img {
-    float: left;
-    width: 30%;
-    max-width: 200px;
-    margin-right: 1rem;
-    margin-bottom: 0.5rem;
+  flex: 0 0 30%;
+  /* fixed 30% width */
+  width: 20%;
+  align-self: flex-start;
+  /* ensure it respects its own margin */
+  margin-top: 0.5em;
+  /* adjust this to match your h2’s computed line-height/margin */
 }
 
+.product .product-info {
+  flex: 1;
+  /* take remaining space */
+}
+
+
 .product .product-info h2 {
-    margin-top: 0;
+  margin-top: 0;
 }
 
 .product .product-info p {
-    line-height: 1.4;
+  line-height: 1.4;
 }
 
 
 /* Keep list horizontal */
 .product-toc ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+  display: flex;
+  justify-content: center;
+  /* horizontally center all LIs */
+  align-items: center;
+  /* vertically align if they ever wrap or have differing heights */
+  gap: 1rem;
+  /* space between items */
+  list-style: none;
+  padding: 3rem;
+  margin: 0;
 }
 
-.product-toc li {
-    display: inline-block;
-    margin: 0;
-    /* spacing handled by the separator */
+.product-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
 }
+
 
 /* Separator bar between items */
 .product-toc li+li::before {
-    content: "|";
-    display: inline-block;
-    margin: 0 0.75rem;
-    /* space around the bar */
-    color: #999;
-    /* tweak to match your design */
+  content: "|";
+  display: inline-block;
+  margin: 0 0.75rem;
+  /* space around the bar */
+  color: #999;
+  /* tweak to match your design */
 }
 
 /* Link styling */
 .product-toc a {
-    text-decoration: none;
-    padding: 0.25rem 0;
-    /* gives a little click area */
-    border-bottom: 1px dotted var(--color-accent);
+  text-decoration: none;
+  padding: 0.25rem 0;
+  /* gives a little click area */
+  border-bottom: 1px dotted var(--color-accent);
 }
 
 .product-toc a:hover {
-    color: var(--color-accent);
+  color: var(--color-accent);
 }
 
 
@@ -74,19 +97,25 @@ nav ul li {
 
 @media only screen and (max-width: 855px) {
 
-    /* Make each nav item stack */
-    nav ul li {
-        display: block;
-        /* change from inline to block */
-        padding-right: 0;
-        /* remove the large right padding */
-        margin-bottom: 0.75rem;
-        /* space between items */
-    }
+  /* Make each nav item stack */
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    /* center stacked links */
+  }
+}
 
-    /* Center the links in their container */
-    nav ul {
-        text-align: center;
-        /* centers the block-level li contents */
-    }
+@media only screen and (max-width: 480px) {
+  nav ul {
+    gap: 0.75rem;
+    /* smaller gap for narrow screens */
+    padding-left: 0;
+    /* avoid extra left margin */
+  }
+
+  nav a {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    /* slightly reduce text size */
+  }
 }

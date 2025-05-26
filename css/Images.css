@@ -14,10 +14,13 @@
 
 /* Small Screen tweaks */
 @media only screen and (max-width: 480px) {
-    .product img {
-        float: none;
-        display: block;
-        width: 80%;
-        margin: 0 auto 1rem;
+    .product {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .product .product-info {
+        padding: 0.5rem 1rem;
     }
 }
