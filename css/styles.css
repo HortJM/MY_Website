@@ -116,6 +116,11 @@ h2 {
     letter-spacing: 0.05rem;
 }
 
+h1 {
+    font-family: "Space Mono", monospace;
+    font-weight: 700;
+    font-style: normal;
+}
 
 a {
     color: #0055aa;
