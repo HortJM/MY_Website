@@ -56,8 +56,10 @@ main p {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
     padding: 2rem;
-    align-items: start;
+    align-items:stretch; /* <-- change from 'start' to 'stretch' */
+    max-height:fit-content;
 }
+
 
 .grid-item {
     background-color: rgba(255, 255, 255, 0.8);
